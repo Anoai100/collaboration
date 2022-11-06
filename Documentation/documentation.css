@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 5px;
+  grid-template-areas:
+      "nav content";
+  background-color: LightGray;
+}
+#navbar {
+  grid-area: nav;
+  background-color: #3C1421;
+}
+#navbar ul {
+  list-style-type: none;
+}
+#main-doc {
+  grid-area: content;
+  background-color: PaleTurquoise;
+  display: grid;
+  grid-template-rows: repeat(5, 0.2fr) 30px;
+  grid-gap: 5px;
+  grid-template-areas:
+    "section1"
+    "section2"
+    "section3"
+    "section4"
+    "section5"
+    "paragraph";
+
+}
+section:nth-of-type(1) {
+  grid-area: section1;
+  order: -1;
+}
+section:nth-of-type(2) {
+  grid-area: section2;
+}
+section:nth-of-type(3) {
+  grid-area: section3;
+}
+section:nth-of-type(4) {
+  grid-area: section4;
+  order: 1;
+}
+section:nth-of-type(5) {
+  grid-area: section5;
+  order: 0;
+}
+main p {
+  grid-area: paragraph;
+
+}
+section {
+  display: grid;
+  grid-template-rows: 0.5fr 3.5fr;
+  grid-template-areas:
+    "header"
+    "article";
+}
+section header {
+  grid-area: header;
+  justify-self: center;
+}
+section article {
+  grid-area: article;
+  align-self: end;
+}

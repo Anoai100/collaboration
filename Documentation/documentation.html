@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS</title>
+  <link rel="stylesheet" href="documentation.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>
+      <h1>CSS Documentation</h1>
+    </header>
+    <ul>
+      <li>
+        <a class="nav-link" href="#what_is_css">What is CSS</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#css_syntax"> CSS Syntax</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#the_box_model">The Box Model</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#display">Display</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#colors">Colors</a>
+      </li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="what_is_css">
+      <header>What is CSS</header>
+      <article>
+        <p>
+          <span>CSS</span> short for <span>Cascading Style Sheets</span> allows developers to design webpages in ways html can't. Without css, the page is rendered by the browser using basic styles, just enough to make it visible.
+        </p>
+        <p>
+          CSS makes it possible to style specific elements of the html, or style a group of elements using selector which will be covered later on. CSS is easy to learn and the only requirements are:-
+          <ul>
+            <li>
+              basic HTML; assigning class and id.
+            </li>
+            <li>
+              file management; will help to know how to access your css file within html
+            </li>
+          </ul>
+        </p>
+        <p>
+          CSS can be written within the html element tag, or defined in the head element by nesting the style element. The most common and better style is to create a separate text file, saved with .css extension and then linking it with th HTML by nesting a link element in the html head. Such a file can be reused anytime by linking to different html files.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="css_syntax">
+      <header>CSS Syntax</header>
+      <article>
+         <p>
+          Before any styling, you should be able to target the element. We do this by refering to the element tag, id or class, it's called a selector.
+          <code>
+            <pre>
+              selector {
+                property: value;
+              }
+            </pre>
+          </code>
+        </p>
+        <p>
+          There are basically 3 types of selectors;
+          <ul>
+            <li>
+              Element tag
+            </li>
+            <li>
+              .Class
+            </li>
+            <li>
+              #ID
+            </li>
+          </ul>
+        </p>
+        <code>
+          <pre>
+            tag {
+              color: white;
+            }
+          </pre>
+        </code>
+        <code>
+          <pre>
+            .class {
+              color: white;
+            }
+          </pre>
+          </code>
+          <code>
+            <pre>
+            #id {
+              color: white;
+            }
+          </pre>
+        </code>
+        <p>
+          Keep in mind, the id must be unique to the element in the whole file. The class on the other hand can be used to group elements that might take the same styling. The element tag takes styles and applies to all elements of the same tag.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="the_box_model">
+      <header>The Box Model</header>
+      <article>
+        <p>
+          Elements in CSS are considered a 'box', with width and height, padding, margin, and borders. Close attention should be given to the sizing of the element as it can change unexpectedly. An element size will change once given padding, margin and border-width which will all be added to the width to give the total sizing.
+        </p>
+        <p>
+          This can be bad as it cause nearby elements to be pushed changing the whole size of the page or cause elements to overflow and sometimes overlap. There are special rules that can prevent this situation like <span class="example">display</span>, <span class="example">box-sizing</span>, <span class="example">overflow</span>.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="display">
+      <header>Display</header>
+      <article>
+        <p>
+          As elements are considered 'boxes', they have certain display rules by default.
+          Some elements are <span class="example">block</span> like the h1 - h6, p, div, section, among others.
+        </p>
+        <p>
+          These elements break to a new a line, there padding and margin properties push other elements away from them and the element will extend inline to fill any space available in its container. The width and height are respected.
+        </p>
+        <p>
+          Other elements take <span class="example">inline</span> display like span, em, strong, among others.
+        </p>
+        <p>
+          The element does not break to a new line, width and height are not applied. Vertical margins, padding and borders will not puch away other inline elements but horizontal ones will.
+        </p>
+        <p>
+          Elements also have display styling that controls how their content displays within them. By setting <code>dispaly: Flex;</code>, the element outer display remains but the inner display change to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="colors">
+      <header>Colors</header>
+      <article>
+        <p>
+          In this module, we will not dive into the styling but simply state a few crucial points to follow in order to make your content readable while also attracting attention to the intended elements at the same time keeping the styling minimal.
+        </p>
+        <p>
+          It is very important to choose a background color that won't strain the readers eyes but also one that is not boring. The all the colors of other elements with be based off it. it is advised to keep the contrast between the background color and the color of element atleast 4.5:1 for normal text and 3:1 for large-text
+        </p>
+      </article>
+    </section>
+    <p id="where-to">
+      With that introduction to CSS, you can dive into the language at <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/#build-a-survey-form-project">FREECODECAMP</a>
+    </p>
+  </main>
+</body>
+</html>
